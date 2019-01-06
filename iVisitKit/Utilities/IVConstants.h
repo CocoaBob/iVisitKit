@@ -82,7 +82,7 @@ typedef struct {
 #define PAGE_PROPORTION 1
 #define WELCOME_PAGE_MARGIN_INSET_SCALE_RATIO 0.06f
 #define WELCOME_PAGE_BORDER_INSET ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)?6:4)
-#define NODE_PAGE_MARGIN_INSET 6
+#define NODE_PAGE_MARGIN_INSET 4
 
 #define BUTTON_HIGHLIGHT_COLOR [UIColor colorWithRed:0.059 green:0.482 blue:0.996 alpha:1.0]
 //[UIColor colorWithRed:0.9608 green:0.3176 blue:0.0353 alpha:1.0]

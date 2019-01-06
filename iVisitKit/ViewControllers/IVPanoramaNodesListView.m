@@ -216,7 +216,7 @@
         _contentLayer = [CALayer layer];
         _contentLayer.anchorPoint = CGPointMake(0.5, 0.5);
         _contentLayer.contentsGravity = kCAGravityResizeAspectFill;
-        _contentLayer.borderWidth = 2;
+        _contentLayer.borderWidth = 1;
         [self.layer addSublayer:_contentLayer];
 		
         // Gestures
@@ -242,9 +242,11 @@
     _selected = selected;
     
     // Update layers' colors
-    _contentLayer.borderColor = [UIColor colorWithWhite:_selected?1:0.67 alpha:1].CGColor;
+    _contentLayer.borderWidth = _selected?2:1;
+    _contentLayer.borderColor = [UIColor colorWithWhite:_selected?0.33:0.5 alpha:1].CGColor;
     for (CALayer *bgLayer in _bgLayers) {
-        bgLayer.borderColor = [UIColor colorWithWhite:_selected?0.9:0.67 alpha:1].CGColor;
+        bgLayer.borderWidth = _selected?2:1;
+        bgLayer.borderColor = [UIColor colorWithWhite:_selected?0.33:0.5 alpha:1].CGColor;
     }
 }
 
@@ -258,8 +260,8 @@
     
     CALayer *bgLayer = [CALayer layer];
     bgLayer.backgroundColor = [UIColor grayColor].CGColor;
-    bgLayer.borderWidth = 2;
-    bgLayer.borderColor = [UIColor colorWithWhite:0.67 alpha:1].CGColor;
+    bgLayer.borderWidth = 1;
+    bgLayer.borderColor = [UIColor colorWithWhite:0.5 alpha:1].CGColor;
     bgLayer.allowsEdgeAntialiasing = YES;
     bgLayer.anchorPoint = CGPointMake(0.5, 0.5);
     
@@ -400,10 +402,10 @@
 
 @interface IVNodesListBaseView () <UIScrollViewDelegate>
 
-@property (nonatomic,strong) UIScrollView *pagingScrollView;
-
 @property (nonatomic,strong) NSMutableSet *recycledPages;
 @property (nonatomic,strong) NSMutableSet *visiblePages;
+
+@property (nonatomic,strong) NSLayoutConstraint *pagingScrollViewBottomConstraint;
 
 - (void)updateAllPages;
 
@@ -438,8 +440,14 @@
     _pagingScrollView.showsVerticalScrollIndicator = NO;
     _pagingScrollView.showsHorizontalScrollIndicator = NO;
     _pagingScrollView.delegate = self;
-    _pagingScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    _pagingScrollView.translatesAutoresizingMaskIntoConstraints = false;
     [self addSubview:_pagingScrollView];
+    
+    [_pagingScrollView.topAnchor constraintEqualToAnchor:self.topAnchor constant:26].active = true;
+    [_pagingScrollView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = true;
+    [_pagingScrollView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = true;
+    _pagingScrollViewBottomConstraint = [_pagingScrollView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:0];
+    _pagingScrollViewBottomConstraint.active = true;
     
     // Step 2: prepare to tile content
     _recycledPages = [NSMutableSet new];
@@ -517,6 +525,14 @@
 }
 
 #pragma mark - Tiling and page configuration
+
+- (CGFloat)scrollViewThickness {
+    if (_isVertical) {
+        return _pagingScrollView.frame.size.width;
+    } else {
+        return _pagingScrollView.frame.size.height;
+    }
+}
 
 - (CGFloat)pageWidth {
     if (_isVertical) {
@@ -702,10 +718,11 @@ typedef NS_ENUM (NSInteger, IVNodesListPosition) {
 
 @interface IVPanoramaNodesListView ()
 
-@property (nonatomic,weak) IBOutlet NSLayoutConstraint *bottomConstraint;
-@property (nonatomic,weak) IBOutlet UILabel *pageNameLabel;
-@property (nonatomic,weak) IBOutlet UIView *handleView;
-@property (nonatomic,weak) IBOutlet UIButton *toggleButton1,*toggleButton2;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *heightConstraint;
+@property (nonatomic, weak) IBOutlet UILabel *pageNameLabel;
+@property (nonatomic, weak) IBOutlet UIView *handleView;
+@property (nonatomic, weak) IBOutlet UIButton *toggleButton1,*toggleButton2;
 
 @end
 
@@ -787,12 +804,15 @@ typedef NS_ENUM (NSInteger, IVNodesListPosition) {
     switch (position) {
         case IVNodesListPositionAll:
             _bottomConstraint.constant = 0;
+            self.pagingScrollView.hidden = false;
             break;
         case IVNodesListPositionBar:
-            _bottomConstraint.constant = -[self pageHeight];
+            _bottomConstraint.constant = [self scrollViewThickness];
+            self.pagingScrollView.hidden = true;
             break;
         case IVNodesListPositionHidden:
-            _bottomConstraint.constant = -CGRectGetHeight(self.frame);
+            _bottomConstraint.constant = CGRectGetHeight(self.frame);
+            self.pagingScrollView.hidden = true;
             break;
         default:
             break;
@@ -879,6 +899,21 @@ typedef NS_ENUM (NSInteger, IVNodesListPosition) {
 - (void)updateAllPages {
     [super updateAllPages];
     [self updateNodesListOffsetWithNodeID:[(IVPanoramaDocument *)[IVDocumentManager shared].currentOpeningDocument currentNodeID]];
+}
+
+#pragma mark - Setup Images
+
+- (void)setupToggleButtons {
+    NSBundle *imagesBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]];
+    [_toggleButton1 setImage:[[UIImage imageNamed:@"img_target" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [_toggleButton2 setImage:[[UIImage imageNamed:@"img_target" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+}
+
+- (void)updateSafeAreaBottom {
+    self.heightConstraint.constant = 128 + self.safeAreaInsets.bottom;
+    self.pagingScrollViewBottomConstraint.constant = -self.safeAreaInsets.bottom;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
 @end

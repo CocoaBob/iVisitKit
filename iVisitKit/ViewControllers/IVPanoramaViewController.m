@@ -64,7 +64,10 @@
 #define FOV_MAX 80
 #define FOV_MIN 40
 
-@implementation IVPanoramaViewController
+@implementation IVPanoramaViewController {
+    UIColor *_originalNavBarTintColor;
+    NSDictionary *_originalNavBarTitleTextAttributes;
+}
 
 + (instancetype)shared {
     static id __sharedInstance = nil;
@@ -136,7 +139,12 @@
     [btnPause addTarget:self action:@selector(togglePlayPause:) forControlEvents:UIControlEventTouchUpInside];
     _btnPlay = [[UIBarButtonItem alloc] initWithCustomView:btnPause];
     
+    // Button Images
     [self updateNavigationBarButtonImages];
+    [self setupFullScreenButtons];
+    
+    // Toggle Buttons
+    [_nodesListView setupToggleButtons];
 }
 
 - (void)viewDidUnload {
@@ -150,6 +158,21 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[_nodesListView hidePageScrollView];
+    
+    // Appearance
+    _originalNavBarTintColor = [UINavigationBar appearance].tintColor;
+    _originalNavBarTitleTextAttributes = [UINavigationBar appearance].titleTextAttributes;
+    [UINavigationBar appearance].tintColor = UIColor.darkGrayColor;
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: UIColor.darkGrayColor};
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = NO;
+    
+    // Close button
+    if (self.navigationController.viewControllers.count > 1 || self.presentingViewController != nil) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                              target:self
+                                                                                              action:@selector(dismissSelf)];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -179,10 +202,6 @@
         [self setupSceneBeforeAnimation];
         [self performSelector:@selector(animateToStartAngleAndFOV) withObject:nil afterDelay:TRANSIT_ZOOM_DURATION + 0.1]; // Wait for the fade out animation
     }
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                          target:self
-                                                                                          action:@selector(dismissSelf)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -204,6 +223,10 @@
         [self.overlayScene removeAllOverlays];
         [_overlayTexturesCache removeAllObjects];
     }
+    
+    // Appearance
+    [UINavigationBar appearance].tintColor = _originalNavBarTintColor;
+    [UINavigationBar appearance].titleTextAttributes = _originalNavBarTitleTextAttributes;
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -236,6 +259,17 @@
     [self updateOverlayLogoPosition];
     [self updateOverlaySize];
 }
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    // Safe Area
+    [_nodesListView updateSafeAreaBottom];
+}
+
+//- (void)viewSafeAreaInsetsDidChange {
+//    [_nodesListView updateSafeAreaBottom];
+//}
 
 #pragma mark - Overwrite Super Class Methods
 
@@ -291,25 +325,33 @@
 
 #pragma mark - UI Controls
 
+- (void)setupFullScreenButtons {
+    NSBundle *imagesBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]];
+    [_btnNaviForMotionMode setImage:[[UIImage imageNamed:@"img_navi_fullscreen" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [_btnNaviForMotionMode setImage:[[UIImage imageNamed:@"img_navi_fullscree_highlight" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
+    [_btnMotionForMotionMode setImage:[[UIImage imageNamed:@"img_compass_fullscreen" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+}
+
 - (void)updateNavigationBarButtonImages {
+    NSBundle *imagesBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]];
     if (self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact) {
-        [(UIButton *)_btnMotion.customView setImage:[[UIImage imageNamed:@"img_compass_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnNavi.customView setImage:[[UIImage imageNamed:@"img_navi_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnNavi.customView setImage:[UIImage imageNamed:@"img_navi_highlight_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
-        [(UIButton *)_btnMap.customView setImage:[[UIImage imageNamed:@"img_map_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound_muted_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
-        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_pause_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_play_s" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
+        [(UIButton *)_btnMotion.customView setImage:[[UIImage imageNamed:@"img_compass_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnNavi.customView setImage:[[UIImage imageNamed:@"img_navi_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnNavi.customView setImage:[UIImage imageNamed:@"img_navi_highlight_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
+        [(UIButton *)_btnMap.customView setImage:[[UIImage imageNamed:@"img_map_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound_muted_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
+        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_pause_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_play_s" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
     } else {
-        [(UIButton *)_btnMotion.customView setImage:[[UIImage imageNamed:@"img_compass" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnNavi.customView setImage:[[UIImage imageNamed:@"img_navi" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnNavi.customView setImage:[UIImage imageNamed:@"img_navi_highlight" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
-        [(UIButton *)_btnMap.customView setImage:[[UIImage imageNamed:@"img_map" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound_muted" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
-        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_pause" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_play" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"Images.bundle"]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
+        [(UIButton *)_btnMotion.customView setImage:[[UIImage imageNamed:@"img_compass" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnNavi.customView setImage:[[UIImage imageNamed:@"img_navi" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnNavi.customView setImage:[UIImage imageNamed:@"img_navi_highlight" inBundle:imagesBundle compatibleWithTraitCollection:nil] forState:UIControlStateSelected];
+        [(UIButton *)_btnMap.customView setImage:[[UIImage imageNamed:@"img_map" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnMute.customView setImage:[[UIImage imageNamed:@"img_sound_muted" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
+        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_pause" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [(UIButton *)_btnPlay.customView setImage:[[UIImage imageNamed:@"img_play" inBundle:imagesBundle compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateSelected];
     }
 }
 
@@ -1317,76 +1359,87 @@
 }
 
 - (void)updateOverlays {
-    IVPanoramaDocument *curDoc = (IVPanoramaDocument *)[self currentOpeningDocument];
-    IVPanoramaNode *curNode = [curDoc currentNode];
-    CGFloat viewWidth = CGRectGetWidth(_scnView.bounds);
-    CGFloat viewHeight = CGRectGetHeight(_scnView.bounds);
-    
-    // Projection Matrix
-    // Adjust the focal lengths of the camera project matrix before calculating node positions
-    SCNMatrix4 projectionMatrix = _panoramaScene.cameraNode.presentationNode.camera.projectionTransform;
-    if (viewWidth > viewHeight) {
-        projectionMatrix.m11 = ABS(projectionMatrix.m11);
-        projectionMatrix.m22 = projectionMatrix.m11 * viewWidth / viewHeight;
-    } else {
-        projectionMatrix.m22 = ABS(projectionMatrix.m22);
-        projectionMatrix.m11 = projectionMatrix.m22 * viewHeight / viewWidth;
-    }
-    
-    // View Matrix
-    SCNMatrix4 viewMatrix = _panoramaScene.cameraNode.presentationNode.transform;
-    { // Bob: I don't know how this part works, it just works.
-        viewMatrix = SCNMatrix4Mult(viewMatrix, SCNMatrix4MakeRotation(M_PI_2, 0, -1, 0)); // Columns 1 = 3, 3 = 1
-        viewMatrix = SCNMatrix4Mult(viewMatrix, SCNMatrix4MakeRotation(-M_PI_2, -1, 0, 0)); // Columns 2 = -3, 3 = -2
-        viewMatrix = SCNMatrix4Invert(viewMatrix);
+    dispatch_block_t block = ^ {
+        IVPanoramaDocument *curDoc = (IVPanoramaDocument *)[self currentOpeningDocument];
+        IVPanoramaNode *curNode = [curDoc currentNode];
+        CGFloat viewWidth = CGRectGetWidth(_scnView.bounds);
+        CGFloat viewHeight = CGRectGetHeight(_scnView.bounds);
         
-        if (curDoc.type == IVDocTypePanoramaV5) {
-            viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(-M_PI_2, 0, 0, 1), viewMatrix);
-            viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(_nodeAngleV - M_PI_2, 1, 0, 0), viewMatrix);
-            viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(M_PI - _nodeAngleH, 0, 0, 1), viewMatrix);
-        } else if (curDoc.type == IVDocTypePanorama360) {
-            viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(-M_PI_2, 0, 0, 1), viewMatrix);
-        }
-    }
-    
-    // No need to update if the view isn't changed
-    if (SCNMatrix4EqualToMatrix4(projectionMatrix, _lastProjectionMatrix) &&
-        SCNMatrix4EqualToMatrix4(viewMatrix, _lastViewMatrix)) {
-        return;
-    }
-    
-    // Remember the last status
-    _lastProjectionMatrix = projectionMatrix;
-    _lastViewMatrix = viewMatrix;
-    
-    // Update each node
-    for (SKSpriteNode *nodeOverlay in [self.overlayScene allNodes]) {
-        NSDictionary *route = curDoc.routesDict[nodeOverlay.name];
-        NSString *nodeID = [curDoc.currentNodeID isEqualToString:route[@"to"]]?route[@"from"]:route[@"to"];
-        IVPanoramaNode *node = [curDoc nodeWithNodeID:nodeID];
-        SCNMatrix4 modelViewMatrix = SCNMatrix4Identity;
-        
-        if (curDoc.type == IVDocTypePanoramaV4 || curDoc.type == IVDocTypePanoramaV5) {
-            modelViewMatrix = SCNMatrix4Mult(SCNMatrix4MakeTranslation(node.coordX-curNode.coordX, node.coordY-curNode.coordY, node.coordZ-curNode.coordZ), viewMatrix);
-        } else if (curDoc.type == IVDocTypePanorama360) {
-            CGFloat coordX = [route[@"coordX"] floatValue];
-            CGFloat coordY = [route[@"coordY"] floatValue];
-            CGFloat coordZ = [route[@"coordZ"] floatValue];
-            modelViewMatrix = SCNMatrix4Mult(SCNMatrix4MakeTranslation(coordY, -coordX, coordZ), viewMatrix);
+        // Projection Matrix
+        // Adjust the focal lengths of the camera project matrix before calculating node positions
+        SCNMatrix4 projectionMatrix = _panoramaScene.cameraNode.presentationNode.camera.projectionTransform;
+        if (viewWidth > viewHeight) {
+            projectionMatrix.m11 = ABS(projectionMatrix.m11);
+            projectionMatrix.m22 = projectionMatrix.m11 * viewWidth / viewHeight;
+        } else {
+            projectionMatrix.m22 = ABS(projectionMatrix.m22);
+            projectionMatrix.m11 = projectionMatrix.m22 * viewHeight / viewWidth;
         }
         
-        [self setOverlayPosition:nodeOverlay viewWidth:viewWidth viewHeight:viewHeight projectionMatrix:projectionMatrix modelViewMatrix:modelViewMatrix];
-    }
-    
-    for (SKSpriteNode *annotationOverlay in [self.overlayScene allAnnotations]) {
-        NSString *annotationID = annotationOverlay.name;
-        IVPanoramaAnnotation *annotation = curDoc.annotationsDict[annotationID];
-        CGFloat coordX = [annotation[@"coordX"] floatValue];
-        CGFloat coordY = [annotation[@"coordY"] floatValue];
-        CGFloat coordZ = [annotation[@"coordZ"] floatValue];
-        SCNMatrix4 modelViewMatrix = SCNMatrix4Mult(SCNMatrix4MakeTranslation(coordY, -coordX, coordZ), viewMatrix);
+        // View Matrix
+        SCNMatrix4 viewMatrix = _panoramaScene.cameraNode.presentationNode.transform;
+        { // Bob: I don't know how this part works, it just works.
+            viewMatrix = SCNMatrix4Mult(viewMatrix, SCNMatrix4MakeRotation(M_PI_2, 0, -1, 0)); // Columns 1 = 3, 3 = 1
+            viewMatrix = SCNMatrix4Mult(viewMatrix, SCNMatrix4MakeRotation(-M_PI_2, -1, 0, 0)); // Columns 2 = -3, 3 = -2
+            viewMatrix = SCNMatrix4Invert(viewMatrix);
+            
+            if (curDoc.type == IVDocTypePanoramaV5) {
+                viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(-M_PI_2, 0, 0, 1), viewMatrix);
+                viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(_nodeAngleV - M_PI_2, 1, 0, 0), viewMatrix);
+                viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(M_PI - _nodeAngleH, 0, 0, 1), viewMatrix);
+            } else if (curDoc.type == IVDocTypePanorama360) {
+                viewMatrix = SCNMatrix4Mult(SCNMatrix4MakeRotation(-M_PI_2, 0, 0, 1), viewMatrix);
+            }
+        }
         
-        [self setOverlayPosition:annotationOverlay viewWidth:viewWidth viewHeight:viewHeight projectionMatrix:projectionMatrix modelViewMatrix:modelViewMatrix];
+        // No need to update if the view isn't changed
+        if (SCNMatrix4EqualToMatrix4(projectionMatrix, _lastProjectionMatrix) &&
+            SCNMatrix4EqualToMatrix4(viewMatrix, _lastViewMatrix)) {
+            return;
+        }
+        
+        // Remember the last status
+        _lastProjectionMatrix = projectionMatrix;
+        _lastViewMatrix = viewMatrix;
+        
+        // Update each node
+        for (SKSpriteNode *nodeOverlay in [self.overlayScene allNodes]) {
+            NSDictionary *route = curDoc.routesDict[nodeOverlay.name];
+            NSString *nodeID = [curDoc.currentNodeID isEqualToString:route[@"to"]]?route[@"from"]:route[@"to"];
+            IVPanoramaNode *node = [curDoc nodeWithNodeID:nodeID];
+            SCNMatrix4 modelViewMatrix = SCNMatrix4Identity;
+            
+            if (curDoc.type == IVDocTypePanoramaV4 || curDoc.type == IVDocTypePanoramaV5) {
+                modelViewMatrix = SCNMatrix4Mult(SCNMatrix4MakeTranslation(node.coordX-curNode.coordX, node.coordY-curNode.coordY, node.coordZ-curNode.coordZ), viewMatrix);
+            } else if (curDoc.type == IVDocTypePanorama360) {
+                CGFloat coordX = [route[@"coordX"] floatValue];
+                CGFloat coordY = [route[@"coordY"] floatValue];
+                CGFloat coordZ = [route[@"coordZ"] floatValue];
+                modelViewMatrix = SCNMatrix4Mult(SCNMatrix4MakeTranslation(coordY, -coordX, coordZ), viewMatrix);
+            }
+            
+            [self setOverlayPosition:nodeOverlay viewWidth:viewWidth viewHeight:viewHeight projectionMatrix:projectionMatrix modelViewMatrix:modelViewMatrix];
+        }
+        
+        for (SKSpriteNode *annotationOverlay in [self.overlayScene allAnnotations]) {
+            NSString *annotationID = annotationOverlay.name;
+            IVPanoramaAnnotation *annotation = curDoc.annotationsDict[annotationID];
+            CGFloat coordX = [annotation[@"coordX"] floatValue];
+            CGFloat coordY = [annotation[@"coordY"] floatValue];
+            CGFloat coordZ = [annotation[@"coordZ"] floatValue];
+            SCNMatrix4 modelViewMatrix = SCNMatrix4Mult(SCNMatrix4MakeTranslation(coordY, -coordX, coordZ), viewMatrix);
+            
+            [self setOverlayPosition:annotationOverlay viewWidth:viewWidth viewHeight:viewHeight projectionMatrix:projectionMatrix modelViewMatrix:modelViewMatrix];
+        }
+    };
+    
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block();
+        });
+    }
+    else {
+        block();
     }
 }
 

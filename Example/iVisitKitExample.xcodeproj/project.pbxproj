@@ -184,7 +184,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iVisitKitExample/Pods-iVisitKitExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iVisitKitExample/Pods-iVisitKitExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/iVisitKit/iVisitKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -195,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVisitKitExample/Pods-iVisitKitExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iVisitKitExample/Pods-iVisitKitExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

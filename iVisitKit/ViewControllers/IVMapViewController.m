@@ -12,6 +12,8 @@
     BOOL isVisible;
     BOOL isFullScreenUIMode;
     NSUInteger currentMapIndex;
+    UIColor *_originalNavBarTintColor;
+    NSDictionary *_originalNavBarTitleTextAttributes;
 }
 
 + (instancetype)shared {
@@ -93,12 +95,24 @@
 	}
 	[self scrollToCurrentMap];
 	[self tilePages];
+    
+    // Appearance
+    _originalNavBarTintColor = [UINavigationBar appearance].tintColor;
+    _originalNavBarTitleTextAttributes = [UINavigationBar appearance].titleTextAttributes;
+    [UINavigationBar appearance].tintColor = UIColor.darkGrayColor;
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: UIColor.darkGrayColor};
+    self.navigationController.navigationBarHidden = YES;
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     isVisible = NO;
     [super viewWillDisappear:animated];
     [self showBars:YES animated:YES];
+    
+    // Appearance
+    [UINavigationBar appearance].tintColor = _originalNavBarTintColor;
+    [UINavigationBar appearance].titleTextAttributes = _originalNavBarTitleTextAttributes;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

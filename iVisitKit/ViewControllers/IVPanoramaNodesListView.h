@@ -51,6 +51,7 @@
 
 @property (nonatomic, weak) IBOutlet id<IVNodesListViewDelegate> delegate;
 
+@property (nonatomic, strong) UIScrollView *pagingScrollView;
 @property (nonatomic, assign) BOOL isVertical;
 @property (nonatomic, assign) BOOL alwaysBounce;
 @property (nonatomic, assign) UIEdgeInsets listInsets;
@@ -86,5 +87,8 @@
 - (void)animateHidePageScrollView:(void(^)(BOOL finished))completionHandler;
 
 - (void)updateNodesListOffsetWithNodeID:(NSString *)selectedNodeID;
+
+- (void)setupToggleButtons;
+- (void)updateSafeAreaBottom;
 
 @end
