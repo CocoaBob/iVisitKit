@@ -1,0 +1,1119 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05203EDF47BE4145653462A23DAAE914 /* IVPanoramaScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 060798CF0514CB796A2EAC16A0591440 /* IVPanoramaScene.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0D922B43BADDF45B6741DE30A0DF88A3 /* IVBaseDocumentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DC1712A48B382EA857D67C4CD4950B3 /* IVBaseDocumentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1225A10D531A3045AE154E44ED1DBA02 /* TBXML+Compression.h in Headers */ = {isa = PBXBuildFile; fileRef = 66EE77F0EC2CC63C41D30C3BA25E8665 /* TBXML+Compression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14D39020C6E27C9E8362BC3C4EC6B729 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C477670B4CEA7937CD942DB688CA3E9 /* ioapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19D41DC84372B032E8D105670D42AD62 /* IVStatusCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = FBAE36FC72FCA7065795C644A1BBD0FA /* IVStatusCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D6CAE43F074474599A250FA814297A6 /* IVMapViews.h in Headers */ = {isa = PBXBuildFile; fileRef = D5F7EDBF9BA78A9297675BFADB82CEE9 /* IVMapViews.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DFA41189CFEB782AC113D5AB485FF73 /* UIViewController+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1CACBE28EDE6F3D04B8FE8644EB44C /* UIViewController+extension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		217F16705A8125F38FC11E72961914E4 /* NSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 153AA872611869A67366C5EB5944F624 /* NSString+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A6351DC523D0D66D4E20F8253D8B3A3 /* IVBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F02B07D392A749B8D6F97D9728D7FF10 /* IVBaseDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2ACCC5D2CDFDFDCA6CD7E5C84D8BCD3E /* IVDocumentManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F9F0B7984BA5C0E9F16FE1E5494195 /* IVDocumentManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FC81AB8E92C6880E254C55BDF6AC7A4 /* TBXML+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D762914F9024A27EEB718FFB2CFDD9 /* TBXML+HTTP.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3D59709C99BA2E40B22EDD84F641C970 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 67461F85A6C17DDD97A702E150EA19DA /* unzip.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3EB70F8607749E5C31745F711B41B07C /* IVPanoramaGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E59E3C3C8F3EC30F19BC5D3A04A76 /* IVPanoramaGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4235585B85E4963F1F342C9BD5CD233F /* IVPanoramaStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5463A0F32BE800245A4D7CAA2E03FBBD /* IVPanoramaStoryboard.storyboard */; };
+		474D9D89F27D6930E5E888147D5BED71 /* UIImage+ResizeMagick.h in Headers */ = {isa = PBXBuildFile; fileRef = 0705BC07E7346FE8026E3D6E39230DA0 /* UIImage+ResizeMagick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D6D5D895DA919C15F63660EB0E731C9 /* CBDoubleTapAndPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F7ADE960F33B4DA0D43A5C99768BA3 /* CBDoubleTapAndPanGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		55DE38BFC59A96156EC0DDEF1C85CE09 /* IVPanoramaOverlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFA412415FA25AD4132EA7196A2E07D /* IVPanoramaOverlayScene.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		573882A1E3FC8059D21B92F341240AF5 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEDC3E299BD94387178D061120114A /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		577A5BE9B4A771925588FD3F38156087 /* IVDocumentParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AEABD5918A0F01191D40BA36A5C353BF /* IVDocumentParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5916CD8DD4EBD4999D3B76F4E016B2ED /* IVPanoramaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A4E10C0311F278DE7B950BFC38F3068 /* IVPanoramaViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B720783C41E4549DEBAADF2735A67BD /* IVDocumentParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 237E4495A6FAF9C999C5ADD70983A1EE /* IVDocumentParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5BF4C4D72D350BB55F05AE3992C7C932 /* IVImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 611D370B24DE2431D15C3A07508C762A /* IVImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B681242CC2F21F43A6439FDD50164BB /* iVisitKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B039D5B1DD41416336A29360E1EAA57 /* iVisitKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BEC6A9FB1611E6EDFCF652DFD8FC8C2 /* Pods-iVisitKitExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5729333E95482886C9359529AD901559 /* Pods-iVisitKitExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		774EF5B01492D9508682D091DA29ACD1 /* IVMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 211F871ED1D713AB6894991B3F8F7EB5 /* IVMapViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AB20BE7646C8812CD9600A5D841FCDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B7E179E923EE798A791B4C9235B2D6 /* Images.xcassets */; };
+		7E04930009AB94C4C17767E4D09A9A38 /* IVMapViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 2745AE0316C307B5046EE6BB28C967C9 /* IVMapViews.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8A4A5846AEE1BFAC5EEFD9CCD9CE2F41 /* IVPanoramaAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F5DCA5F24443FD4E2F099ACD5D6CD8 /* IVPanoramaAnnotationViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8DEC9BE524CE2A666D708DD562708226 /* IVBaseDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7F9A636B0CA9F1F25DC55A817687E /* IVBaseDocument.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8F33FB9851FDFAF5AC3C8540C4F004F0 /* IVStatusCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BF95EEB3F9D1031E074291BC6C3910EA /* IVStatusCenter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		90CD9A2FB598C0DE6469D97EA1A2BD72 /* IVPanoramaNodesListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 697C2A251FC2CF2B2D2FB1C30A9840F3 /* IVPanoramaNodesListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9444EB006770971988CD19B962A0AF20 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B258F6AD2845C2E5FB239F34DB6858 /* NSString+Additions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		955B900DFCDA1B32E1103ABFF0665A19 /* IVPanoramaNodesListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A4BB24616B00DA47F6EF15D4B5E70 /* IVPanoramaNodesListView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9C30696D99D2C58A80D5DD31E6B7A7E5 /* TBXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F219636DE5ED36C8A981259BB23F9F8 /* TBXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DB7B750AE9D418FD1858414CC598702 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 5739C374A7C60ACB0CA74DC3428D3A73 /* ioapi.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9E05176F15DD5CCE44AC2A604C9D9292 /* TBXML+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 51340ECDF52BC7BE5ACD5E7D8385C17E /* TBXML+Compression.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9FD6F5983D23E7046ABFF762870F6E67 /* IVPanoramaOverlayScene.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D5ACAB9C64B5627EA6113912130746 /* IVPanoramaOverlayScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0711B9B39E05685013FA9436602F103 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ECA58575113254D7B72B7C7B5AFD19 /* TBXML.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A3E951F498B3E834AE2F2F7097113430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		A46FE86D7E1499CC53BB710E526244B0 /* IVBaseDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 77A04C94CA9999BF325E5A98BD8322CE /* IVBaseDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6943F0531EBA51CDE9C65394F069AB2 /* CBZipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68159088E4C4F981FF2E5F4B658E9A /* CBZipFile.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A8CE57F9D1FD58CE6283587B18546206 /* UIImage+ResizeMagick.m in Sources */ = {isa = PBXBuildFile; fileRef = 765C80A6FBC8AC37BBE59F4FCF46D88A /* UIImage+ResizeMagick.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A93F39585C61B0CECAFFC703D6060119 /* CBZipFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DD53F2D7797490E878B00189D36C49FF /* CBZipFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9B1445F19D94BD2B49EF79CDDC7D84E /* UIViewController+extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D77DDBF6951E535DDCFED077405452B /* UIViewController+extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB4E6BFD3A05E68CD3A793DF538BEC7A /* IVDocumentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1452CC74E5F04421D682D50DF1F06301 /* IVDocumentManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B3DE24AE87606D02F82BBAE5B4D00FE8 /* IVPanoramaHitTestGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6786DD4ACEF39B8BC9A6FC742C54931A /* IVPanoramaHitTestGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B68D0A7CCB7A0C69F835F804534AD89A /* IVOverlayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4875FC66DE66D0F4F26F8D46D9986933 /* IVOverlayManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7BF73BF26BCF870BF3DDEA4403C2B50 /* TBXML+HTTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 4136F518F12AA46B96E61F9DC1678C24 /* TBXML+HTTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B87CC7BC3AC4935AB55032E049D62705 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B90769769B4759BACC871576F460E74F /* IVBaseDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A26233749E021D0022A080C71DE9822 /* IVBaseDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9D26E520513813AC83FD45272C16D2C /* IVMapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D0215C9E8228C638C224A89A3B5934 /* IVMapStoryboard.storyboard */; };
+		BACDC950AE503C1D7DB8D682C852D4F5 /* IVPanoramaDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE525BF706968977096115974EB8F41 /* IVPanoramaDocument.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C9D17CC57F90124AF0AD4179D5242F23 /* IVHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = BC8CE51845E3BE08CFD73BBA2988E4C5 /* IVHeaders.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA3674D3768DF65503D32532349BDD01 /* IVMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A02516C7166D292C6CC4F66FCC20EF /* IVMapViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CA61F82D6749AF8995BC9FD0B97104EB /* IVConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8D959AD7B9992360725763681E52F6 /* IVConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB636B0310BCA6E628E9FEF71AB03A39 /* IVBaseDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ECE59EF5513A228EB3982F4FABE7EF /* IVBaseDocumentViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CBB303F44945BEFD69FA331E328AE1B5 /* IVPanoramaScene.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA946EEFE446BE299D77D908F8F17F3 /* IVPanoramaScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBD5AE81A068FBD860ED7844FE233FE6 /* IVCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 827600C45C54FBDE94E57642889404F0 /* IVCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D21746EDD361739C681F904545FF5585 /* iVisitKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64CDED5E9EA4BD794A9714674AB51B97 /* iVisitKit-dummy.m */; };
+		D47EAC0D460EA8F15A2BA10C4A26EDB2 /* IVImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 459DFE1EE8A1D8177A953C7D6269CC81 /* IVImageManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DA714558057E36792C2AF0E6910B43C6 /* IVOverlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5C0A0CCE8F573C8EA7770106A6DFA6 /* IVOverlayManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DBFECB2D5F14043138DCB0A2B8A04149 /* TBXML+CBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAEA504E0704A802EDC27E5DD931079 /* TBXML+CBAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DCF4F070932188A2E2933608B372D8B4 /* TBXML+CBAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF279FA61B796D32A6682D50326B92C /* TBXML+CBAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E195FC46447BDA47A59FF246C8FF998D /* IVPanoramaAnnotationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA60CF04900D9DA05A29AA5C40BBAEA /* IVPanoramaAnnotationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E525893B73CC95EB42E8E3703C934D82 /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = F58B3B01E4F19E7A4A67AD0CF29B2D74 /* NSString+Hashes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E772FA78805BD6E019D75E8B7F0B3CBF /* IVCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0668AFD651FDB3C2805C81FC134F219A /* IVCacheManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E82D2464F2F7A2C6F2E58BE1C8CED166 /* CBDoubleTapAndPanGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = D0720674626996EC55CDF5939021C2E1 /* CBDoubleTapAndPanGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC402F9D49C0D642216125A2671A6745 /* IVPanoramaHitTestGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 173398C445156F9ECE0B239927B4DED1 /* IVPanoramaHitTestGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF2B73DBA929D6662E91BB60813B1076 /* NSString+Hashes.h in Headers */ = {isa = PBXBuildFile; fileRef = 971A1A4FC44A1E217023228153BE5908 /* NSString+Hashes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2F750F4C3C79D85CCFA72F368E83023 /* IVPanoramaGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = B85405CC25338CB0B30BB56FBC44D35A /* IVPanoramaGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F69D02A7424D3F6EADF2AA37AD82FA3C /* IVPanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EDA530B2A92EA8F05A804DCBFF135A /* IVPanoramaViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F8CCFEC6CE16E8628AB234C8C5964CAA /* IVPanoramaDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E0156205BE82974252AC8505FFC924F /* IVPanoramaDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9EA79A871CC221FBD91368EC1B05518 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2250F4405C3A6C56A1C731D039DD1C6 /* Images.bundle */; };
+		FCA0C5ECBBB2C33AEBA553D43640CEBA /* Pods-iVisitKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F120EBC90F108BECD42B9D80B2759 /* Pods-iVisitKitExample-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B7C7ABC42916FB202AA3E2DF57A03B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61C2C499EC5FE8D25995AC5DBB19FFD1;
+			remoteInfo = "iVisitKit-Images";
+		};
+		8B6985B5C13EAC0FBCF56AB18CF3ED1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB235A02EBBC472BAD6E276B9824AED1;
+			remoteInfo = iVisitKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		060798CF0514CB796A2EAC16A0591440 /* IVPanoramaScene.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaScene.m; sourceTree = "<group>"; };
+		0668AFD651FDB3C2805C81FC134F219A /* IVCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVCacheManager.m; sourceTree = "<group>"; };
+		0705BC07E7346FE8026E3D6E39230DA0 /* UIImage+ResizeMagick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeMagick.h"; sourceTree = "<group>"; };
+		0E1CACBE28EDE6F3D04B8FE8644EB44C /* UIViewController+extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+extension.m"; sourceTree = "<group>"; };
+		0E699CA0B0454173CDA2716C0068CEF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1452CC74E5F04421D682D50DF1F06301 /* IVDocumentManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVDocumentManager.m; sourceTree = "<group>"; };
+		153AA872611869A67366C5EB5944F624 /* NSString+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		15B7E179E923EE798A791B4C9235B2D6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iVisitKit/Images.xcassets; sourceTree = "<group>"; };
+		173398C445156F9ECE0B239927B4DED1 /* IVPanoramaHitTestGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaHitTestGestureRecognizer.m; sourceTree = "<group>"; };
+		1C7A4BB24616B00DA47F6EF15D4B5E70 /* IVPanoramaNodesListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaNodesListView.m; sourceTree = "<group>"; };
+		1DF3E32B210B736371F48B08207BEFE3 /* iVisitKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iVisitKit-prefix.pch"; sourceTree = "<group>"; };
+		211F871ED1D713AB6894991B3F8F7EB5 /* IVMapViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVMapViewController.h; sourceTree = "<group>"; };
+		237E4495A6FAF9C999C5ADD70983A1EE /* IVDocumentParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVDocumentParser.m; sourceTree = "<group>"; };
+		24F9F0B7984BA5C0E9F16FE1E5494195 /* IVDocumentManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVDocumentManager.h; sourceTree = "<group>"; };
+		2745AE0316C307B5046EE6BB28C967C9 /* IVMapViews.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVMapViews.m; sourceTree = "<group>"; };
+		275E98BFC6D383D1BB8FF18DD5CC86F5 /* Pods-iVisitKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iVisitKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		2E0156205BE82974252AC8505FFC924F /* IVPanoramaDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaDocument.h; sourceTree = "<group>"; };
+		2E5AC25483E62C4C727192FED697EC27 /* Pods-iVisitKitExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iVisitKitExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		32F7F9A636B0CA9F1F25DC55A817687E /* IVBaseDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVBaseDocument.m; sourceTree = "<group>"; };
+		3A0705ABFEE6D1AF8A6464240156FB6B /* Pods-iVisitKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iVisitKitExample-frameworks.sh"; sourceTree = "<group>"; };
+		4136F518F12AA46B96E61F9DC1678C24 /* TBXML+HTTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
+		459DFE1EE8A1D8177A953C7D6269CC81 /* IVImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVImageManager.m; sourceTree = "<group>"; };
+		4875FC66DE66D0F4F26F8D46D9986933 /* IVOverlayManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVOverlayManager.h; sourceTree = "<group>"; };
+		4B039D5B1DD41416336A29360E1EAA57 /* iVisitKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iVisitKit-umbrella.h"; sourceTree = "<group>"; };
+		4B9B12D91797C73A7A3A53AB9606723B /* Pods-iVisitKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iVisitKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		51340ECDF52BC7BE5ACD5E7D8385C17E /* TBXML+Compression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBXML+Compression.m"; sourceTree = "<group>"; };
+		53ECA58575113254D7B72B7C7B5AFD19 /* TBXML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
+		5463A0F32BE800245A4D7CAA2E03FBBD /* IVPanoramaStoryboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = IVPanoramaStoryboard.storyboard; path = iVisitKit/ViewControllers/IVPanoramaStoryboard.storyboard; sourceTree = "<group>"; };
+		548F120EBC90F108BECD42B9D80B2759 /* Pods-iVisitKitExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iVisitKitExample-dummy.m"; sourceTree = "<group>"; };
+		56B258F6AD2845C2E5FB239F34DB6858 /* NSString+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		5729333E95482886C9359529AD901559 /* Pods-iVisitKitExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iVisitKitExample-umbrella.h"; sourceTree = "<group>"; };
+		5739C374A7C60ACB0CA74DC3428D3A73 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; path = ioapi.c; sourceTree = "<group>"; };
+		57C476BBEE46CBFD63ADEE79FDB3F03B /* Pods_iVisitKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iVisitKitExample.framework; path = "Pods-iVisitKitExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4E10C0311F278DE7B950BFC38F3068 /* IVPanoramaViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaViewController.h; sourceTree = "<group>"; };
+		5D77DDBF6951E535DDCFED077405452B /* UIViewController+extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+extension.h"; sourceTree = "<group>"; };
+		5DC1712A48B382EA857D67C4CD4950B3 /* IVBaseDocumentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVBaseDocumentViewController.h; sourceTree = "<group>"; };
+		5FF279FA61B796D32A6682D50326B92C /* TBXML+CBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBXML+CBAdditions.h"; sourceTree = "<group>"; };
+		611D370B24DE2431D15C3A07508C762A /* IVImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVImageManager.h; sourceTree = "<group>"; };
+		616E59E3C3C8F3EC30F19BC5D3A04A76 /* IVPanoramaGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaGestureRecognizer.m; sourceTree = "<group>"; };
+		64CDED5E9EA4BD794A9714674AB51B97 /* iVisitKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iVisitKit-dummy.m"; sourceTree = "<group>"; };
+		6689D9E1E265BB5BA5DB578AF665E7F1 /* iVisitKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iVisitKit.xcconfig; sourceTree = "<group>"; };
+		66EE77F0EC2CC63C41D30C3BA25E8665 /* TBXML+Compression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBXML+Compression.h"; sourceTree = "<group>"; };
+		673535A0CEE29F32931694BA7268A4FE /* iVisitKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = iVisitKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		67461F85A6C17DDD97A702E150EA19DA /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; path = unzip.c; sourceTree = "<group>"; };
+		6786DD4ACEF39B8BC9A6FC742C54931A /* IVPanoramaHitTestGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaHitTestGestureRecognizer.h; sourceTree = "<group>"; };
+		68ECE59EF5513A228EB3982F4FABE7EF /* IVBaseDocumentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVBaseDocumentViewController.m; sourceTree = "<group>"; };
+		6945FD909267E8C5A5235D61F777D7FB /* iVisitKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iVisitKit.framework; path = iVisitKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		697C2A251FC2CF2B2D2FB1C30A9840F3 /* IVPanoramaNodesListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaNodesListView.h; sourceTree = "<group>"; };
+		6C477670B4CEA7937CD942DB688CA3E9 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		6F219636DE5ED36C8A981259BB23F9F8 /* TBXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		73EDA530B2A92EA8F05A804DCBFF135A /* IVPanoramaViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaViewController.m; sourceTree = "<group>"; };
+		73F5DCA5F24443FD4E2F099ACD5D6CD8 /* IVPanoramaAnnotationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaAnnotationViewController.m; sourceTree = "<group>"; };
+		75A02516C7166D292C6CC4F66FCC20EF /* IVMapViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVMapViewController.m; sourceTree = "<group>"; };
+		765C80A6FBC8AC37BBE59F4FCF46D88A /* UIImage+ResizeMagick.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeMagick.m"; sourceTree = "<group>"; };
+		77A04C94CA9999BF325E5A98BD8322CE /* IVBaseDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVBaseDocument.h; sourceTree = "<group>"; };
+		7A26233749E021D0022A080C71DE9822 /* IVBaseDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVBaseDataModel.h; sourceTree = "<group>"; };
+		7DA60CF04900D9DA05A29AA5C40BBAEA /* IVPanoramaAnnotationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaAnnotationViewController.h; sourceTree = "<group>"; };
+		827600C45C54FBDE94E57642889404F0 /* IVCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVCacheManager.h; sourceTree = "<group>"; };
+		82F7ADE960F33B4DA0D43A5C99768BA3 /* CBDoubleTapAndPanGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CBDoubleTapAndPanGestureRecognizer.m; sourceTree = "<group>"; };
+		88D762914F9024A27EEB718FFB2CFDD9 /* TBXML+HTTP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBXML+HTTP.m"; sourceTree = "<group>"; };
+		8EFA412415FA25AD4132EA7196A2E07D /* IVPanoramaOverlayScene.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaOverlayScene.m; sourceTree = "<group>"; };
+		91E9ADD18445B7C3E3EBBB68EA0E8600 /* ResourceBundle-Images-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Images-Info.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		971A1A4FC44A1E217023228153BE5908 /* NSString+Hashes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
+		9A5C0A0CCE8F573C8EA7770106A6DFA6 /* IVOverlayManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVOverlayManager.m; sourceTree = "<group>"; };
+		A6BBF1E96D1E2D2EDDDBECDD497E6A71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA946EEFE446BE299D77D908F8F17F3 /* IVPanoramaScene.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaScene.h; sourceTree = "<group>"; };
+		AEABD5918A0F01191D40BA36A5C353BF /* IVDocumentParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVDocumentParser.h; sourceTree = "<group>"; };
+		B218609FCD420A625D8AFED8A8E7719A /* iVisitKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iVisitKit.modulemap; sourceTree = "<group>"; };
+		B4D5ACAB9C64B5627EA6113912130746 /* IVPanoramaOverlayScene.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaOverlayScene.h; sourceTree = "<group>"; };
+		B820CDC4FD546A3B1ACE1EA85A1CA9D8 /* Pods-iVisitKitExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iVisitKitExample.modulemap"; sourceTree = "<group>"; };
+		B85405CC25338CB0B30BB56FBC44D35A /* IVPanoramaGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVPanoramaGestureRecognizer.h; sourceTree = "<group>"; };
+		BAAEA504E0704A802EDC27E5DD931079 /* TBXML+CBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBXML+CBAdditions.m"; sourceTree = "<group>"; };
+		BC68159088E4C4F981FF2E5F4B658E9A /* CBZipFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CBZipFile.m; sourceTree = "<group>"; };
+		BC8CE51845E3BE08CFD73BBA2988E4C5 /* IVHeaders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVHeaders.h; sourceTree = "<group>"; };
+		BF95EEB3F9D1031E074291BC6C3910EA /* IVStatusCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVStatusCenter.m; sourceTree = "<group>"; };
+		C8D0215C9E8228C638C224A89A3B5934 /* IVMapStoryboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = IVMapStoryboard.storyboard; path = iVisitKit/ViewControllers/IVMapStoryboard.storyboard; sourceTree = "<group>"; };
+		CEE525BF706968977096115974EB8F41 /* IVPanoramaDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVPanoramaDocument.m; sourceTree = "<group>"; };
+		D0720674626996EC55CDF5939021C2E1 /* CBDoubleTapAndPanGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CBDoubleTapAndPanGestureRecognizer.h; sourceTree = "<group>"; };
+		D5F7EDBF9BA78A9297675BFADB82CEE9 /* IVMapViews.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVMapViews.h; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DA4946B44FC6A4876A70B29306044D2D /* Pods-iVisitKitExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iVisitKitExample-resources.sh"; sourceTree = "<group>"; };
+		DD53F2D7797490E878B00189D36C49FF /* CBZipFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CBZipFile.h; sourceTree = "<group>"; };
+		E15CDAD6D8031E29889404CE3FB736E1 /* Pods-iVisitKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iVisitKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		F02B07D392A749B8D6F97D9728D7FF10 /* IVBaseDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IVBaseDataModel.m; sourceTree = "<group>"; };
+		F2250F4405C3A6C56A1C731D039DD1C6 /* Images.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Images.bundle; path = "iVisitKit-Images.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58B3B01E4F19E7A4A67AD0CF29B2D74 /* NSString+Hashes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
+		FBAE36FC72FCA7065795C644A1BBD0FA /* IVStatusCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVStatusCenter.h; sourceTree = "<group>"; };
+		FBBEDC3E299BD94387178D061120114A /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		FE8D959AD7B9992360725763681E52F6 /* IVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IVConstants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10BB4F8E46D994C5B72AD7B34F2AFC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B87CC7BC3AC4935AB55032E049D62705 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40EA181D17D69B6B50B24486EC423DEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FF17AB3940C3AF84F7312669DC30CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E951F498B3E834AE2F2F7097113430 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DF1AF6C2D9A729AA2B354F01A6BD1D0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4468062FD78B404BDD4B000A69289F83 /* iVisitKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2BDD31616AAE5D270645181CA32C5295 /* CBDoubleTapAndPanGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				D0720674626996EC55CDF5939021C2E1 /* CBDoubleTapAndPanGestureRecognizer.h */,
+				82F7ADE960F33B4DA0D43A5C99768BA3 /* CBDoubleTapAndPanGestureRecognizer.m */,
+			);
+			name = CBDoubleTapAndPanGestureRecognizer;
+			path = CBDoubleTapAndPanGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		3225B93C0BABC738AA3FBA57583A25E9 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				5739C374A7C60ACB0CA74DC3428D3A73 /* ioapi.c */,
+				6C477670B4CEA7937CD942DB688CA3E9 /* ioapi.h */,
+				67461F85A6C17DDD97A702E150EA19DA /* unzip.c */,
+				FBBEDC3E299BD94387178D061120114A /* unzip.h */,
+			);
+			name = minizip;
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		3A5A8135A91A3DD78D328ED5B62F1BEB /* CBZipFile */ = {
+			isa = PBXGroup;
+			children = (
+				DD53F2D7797490E878B00189D36C49FF /* CBZipFile.h */,
+				BC68159088E4C4F981FF2E5F4B658E9A /* CBZipFile.m */,
+				3225B93C0BABC738AA3FBA57583A25E9 /* minizip */,
+			);
+			name = CBZipFile;
+			path = CBZipFile;
+			sourceTree = "<group>";
+		};
+		40DB52672C9A6CAC162EF0525F83CA5B /* NSString-Hashes */ = {
+			isa = PBXGroup;
+			children = (
+				971A1A4FC44A1E217023228153BE5908 /* NSString+Hashes.h */,
+				F58B3B01E4F19E7A4A67AD0CF29B2D74 /* NSString+Hashes.m */,
+			);
+			name = "NSString-Hashes";
+			path = "NSString-Hashes";
+			sourceTree = "<group>";
+		};
+		4468062FD78B404BDD4B000A69289F83 /* iVisitKit */ = {
+			isa = PBXGroup;
+			children = (
+				967D895D6C4C02AA62DE84E5BD555E56 /* Managers */,
+				5DE6066D94603A61854457BBC819F32A /* Models */,
+				6969473EE8FB4F869D0D8B12548A708F /* Pod */,
+				E7563E2948D575E8372B184E47DE785B /* Resources */,
+				B58F03FB470B765B48D57C59ACAFB2F1 /* Support Files */,
+				76AD9ED099E746E58F371CE92386724D /* Utilities */,
+				C85C4F636565E8E1DC155D1FCB426BB0 /* Vendors */,
+				D5CA39AED9D4D942E027314ED2C0EBDF /* ViewControllers */,
+			);
+			name = iVisitKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5DE6066D94603A61854457BBC819F32A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A26233749E021D0022A080C71DE9822 /* IVBaseDataModel.h */,
+				F02B07D392A749B8D6F97D9728D7FF10 /* IVBaseDataModel.m */,
+				77A04C94CA9999BF325E5A98BD8322CE /* IVBaseDocument.h */,
+				32F7F9A636B0CA9F1F25DC55A817687E /* IVBaseDocument.m */,
+				2E0156205BE82974252AC8505FFC924F /* IVPanoramaDocument.h */,
+				CEE525BF706968977096115974EB8F41 /* IVPanoramaDocument.m */,
+			);
+			name = Models;
+			path = iVisitKit/Models;
+			sourceTree = "<group>";
+		};
+		5FF06C441BDB63AFF6517367208D651D /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				792A9159AEDE670BCD571E26C48F02FE /* TBXML-Code */,
+				B650D8286509DD350C0E16D7E122FB57 /* TBXML-Headers */,
+			);
+			name = TBXML;
+			path = TBXML;
+			sourceTree = "<group>";
+		};
+		6969473EE8FB4F869D0D8B12548A708F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				673535A0CEE29F32931694BA7268A4FE /* iVisitKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		73FE6AAA5AE8FBF5583CDC69FFEFF02B /* UIImage-ResizeMagick */ = {
+			isa = PBXGroup;
+			children = (
+				0705BC07E7346FE8026E3D6E39230DA0 /* UIImage+ResizeMagick.h */,
+				765C80A6FBC8AC37BBE59F4FCF46D88A /* UIImage+ResizeMagick.m */,
+			);
+			name = "UIImage-ResizeMagick";
+			path = "UIImage-ResizeMagick";
+			sourceTree = "<group>";
+		};
+		76AD9ED099E746E58F371CE92386724D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FE8D959AD7B9992360725763681E52F6 /* IVConstants.h */,
+				BC8CE51845E3BE08CFD73BBA2988E4C5 /* IVHeaders.h */,
+				153AA872611869A67366C5EB5944F624 /* NSString+Additions.h */,
+				56B258F6AD2845C2E5FB239F34DB6858 /* NSString+Additions.m */,
+				5D77DDBF6951E535DDCFED077405452B /* UIViewController+extension.h */,
+				0E1CACBE28EDE6F3D04B8FE8644EB44C /* UIViewController+extension.m */,
+			);
+			name = Utilities;
+			path = iVisitKit/Utilities;
+			sourceTree = "<group>";
+		};
+		792A9159AEDE670BCD571E26C48F02FE /* TBXML-Code */ = {
+			isa = PBXGroup;
+			children = (
+				53ECA58575113254D7B72B7C7B5AFD19 /* TBXML.m */,
+				51340ECDF52BC7BE5ACD5E7D8385C17E /* TBXML+Compression.m */,
+				88D762914F9024A27EEB718FFB2CFDD9 /* TBXML+HTTP.m */,
+			);
+			name = "TBXML-Code";
+			path = "TBXML-Code";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				1DF1AF6C2D9A729AA2B354F01A6BD1D0 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9D9F1414C998EB6B1811808C70C65E68 /* Products */,
+				EC6420BAA016E33659FE43FAD89EF20C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		967D895D6C4C02AA62DE84E5BD555E56 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				827600C45C54FBDE94E57642889404F0 /* IVCacheManager.h */,
+				0668AFD651FDB3C2805C81FC134F219A /* IVCacheManager.m */,
+				24F9F0B7984BA5C0E9F16FE1E5494195 /* IVDocumentManager.h */,
+				1452CC74E5F04421D682D50DF1F06301 /* IVDocumentManager.m */,
+				AEABD5918A0F01191D40BA36A5C353BF /* IVDocumentParser.h */,
+				237E4495A6FAF9C999C5ADD70983A1EE /* IVDocumentParser.m */,
+				611D370B24DE2431D15C3A07508C762A /* IVImageManager.h */,
+				459DFE1EE8A1D8177A953C7D6269CC81 /* IVImageManager.m */,
+				4875FC66DE66D0F4F26F8D46D9986933 /* IVOverlayManager.h */,
+				9A5C0A0CCE8F573C8EA7770106A6DFA6 /* IVOverlayManager.m */,
+				FBAE36FC72FCA7065795C644A1BBD0FA /* IVStatusCenter.h */,
+				BF95EEB3F9D1031E074291BC6C3910EA /* IVStatusCenter.m */,
+			);
+			name = Managers;
+			path = iVisitKit/Managers;
+			sourceTree = "<group>";
+		};
+		9B1878A812CD5A40D4673091BCAADA94 /* TBXML-CBAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				5FF279FA61B796D32A6682D50326B92C /* TBXML+CBAdditions.h */,
+				BAAEA504E0704A802EDC27E5DD931079 /* TBXML+CBAdditions.m */,
+			);
+			name = "TBXML-CBAdditions";
+			path = "TBXML-CBAdditions";
+			sourceTree = "<group>";
+		};
+		9D9F1414C998EB6B1811808C70C65E68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2250F4405C3A6C56A1C731D039DD1C6 /* Images.bundle */,
+				6945FD909267E8C5A5235D61F777D7FB /* iVisitKit.framework */,
+				57C476BBEE46CBFD63ADEE79FDB3F03B /* Pods_iVisitKitExample.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B58F03FB470B765B48D57C59ACAFB2F1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E699CA0B0454173CDA2716C0068CEF4 /* Info.plist */,
+				B218609FCD420A625D8AFED8A8E7719A /* iVisitKit.modulemap */,
+				6689D9E1E265BB5BA5DB578AF665E7F1 /* iVisitKit.xcconfig */,
+				64CDED5E9EA4BD794A9714674AB51B97 /* iVisitKit-dummy.m */,
+				1DF3E32B210B736371F48B08207BEFE3 /* iVisitKit-prefix.pch */,
+				4B039D5B1DD41416336A29360E1EAA57 /* iVisitKit-umbrella.h */,
+				91E9ADD18445B7C3E3EBBB68EA0E8600 /* ResourceBundle-Images-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/iVisitKit";
+			sourceTree = "<group>";
+		};
+		B650D8286509DD350C0E16D7E122FB57 /* TBXML-Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6F219636DE5ED36C8A981259BB23F9F8 /* TBXML.h */,
+				66EE77F0EC2CC63C41D30C3BA25E8665 /* TBXML+Compression.h */,
+				4136F518F12AA46B96E61F9DC1678C24 /* TBXML+HTTP.h */,
+			);
+			name = "TBXML-Headers";
+			path = "TBXML-Headers";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C85C4F636565E8E1DC155D1FCB426BB0 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				2BDD31616AAE5D270645181CA32C5295 /* CBDoubleTapAndPanGestureRecognizer */,
+				3A5A8135A91A3DD78D328ED5B62F1BEB /* CBZipFile */,
+				40DB52672C9A6CAC162EF0525F83CA5B /* NSString-Hashes */,
+				5FF06C441BDB63AFF6517367208D651D /* TBXML */,
+				9B1878A812CD5A40D4673091BCAADA94 /* TBXML-CBAdditions */,
+				73FE6AAA5AE8FBF5583CDC69FFEFF02B /* UIImage-ResizeMagick */,
+			);
+			name = Vendors;
+			path = iVisitKit/Vendors;
+			sourceTree = "<group>";
+		};
+		D5CA39AED9D4D942E027314ED2C0EBDF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DC1712A48B382EA857D67C4CD4950B3 /* IVBaseDocumentViewController.h */,
+				68ECE59EF5513A228EB3982F4FABE7EF /* IVBaseDocumentViewController.m */,
+				211F871ED1D713AB6894991B3F8F7EB5 /* IVMapViewController.h */,
+				75A02516C7166D292C6CC4F66FCC20EF /* IVMapViewController.m */,
+				D5F7EDBF9BA78A9297675BFADB82CEE9 /* IVMapViews.h */,
+				2745AE0316C307B5046EE6BB28C967C9 /* IVMapViews.m */,
+				7DA60CF04900D9DA05A29AA5C40BBAEA /* IVPanoramaAnnotationViewController.h */,
+				73F5DCA5F24443FD4E2F099ACD5D6CD8 /* IVPanoramaAnnotationViewController.m */,
+				B85405CC25338CB0B30BB56FBC44D35A /* IVPanoramaGestureRecognizer.h */,
+				616E59E3C3C8F3EC30F19BC5D3A04A76 /* IVPanoramaGestureRecognizer.m */,
+				6786DD4ACEF39B8BC9A6FC742C54931A /* IVPanoramaHitTestGestureRecognizer.h */,
+				173398C445156F9ECE0B239927B4DED1 /* IVPanoramaHitTestGestureRecognizer.m */,
+				697C2A251FC2CF2B2D2FB1C30A9840F3 /* IVPanoramaNodesListView.h */,
+				1C7A4BB24616B00DA47F6EF15D4B5E70 /* IVPanoramaNodesListView.m */,
+				B4D5ACAB9C64B5627EA6113912130746 /* IVPanoramaOverlayScene.h */,
+				8EFA412415FA25AD4132EA7196A2E07D /* IVPanoramaOverlayScene.m */,
+				ACA946EEFE446BE299D77D908F8F17F3 /* IVPanoramaScene.h */,
+				060798CF0514CB796A2EAC16A0591440 /* IVPanoramaScene.m */,
+				5A4E10C0311F278DE7B950BFC38F3068 /* IVPanoramaViewController.h */,
+				73EDA530B2A92EA8F05A804DCBFF135A /* IVPanoramaViewController.m */,
+			);
+			name = ViewControllers;
+			path = iVisitKit/ViewControllers;
+			sourceTree = "<group>";
+		};
+		E67B1E08267401AE098A4CD0307646C0 /* Pods-iVisitKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				A6BBF1E96D1E2D2EDDDBECDD497E6A71 /* Info.plist */,
+				B820CDC4FD546A3B1ACE1EA85A1CA9D8 /* Pods-iVisitKitExample.modulemap */,
+				4B9B12D91797C73A7A3A53AB9606723B /* Pods-iVisitKitExample-acknowledgements.markdown */,
+				2E5AC25483E62C4C727192FED697EC27 /* Pods-iVisitKitExample-acknowledgements.plist */,
+				548F120EBC90F108BECD42B9D80B2759 /* Pods-iVisitKitExample-dummy.m */,
+				3A0705ABFEE6D1AF8A6464240156FB6B /* Pods-iVisitKitExample-frameworks.sh */,
+				DA4946B44FC6A4876A70B29306044D2D /* Pods-iVisitKitExample-resources.sh */,
+				5729333E95482886C9359529AD901559 /* Pods-iVisitKitExample-umbrella.h */,
+				275E98BFC6D383D1BB8FF18DD5CC86F5 /* Pods-iVisitKitExample.debug.xcconfig */,
+				E15CDAD6D8031E29889404CE3FB736E1 /* Pods-iVisitKitExample.release.xcconfig */,
+			);
+			name = "Pods-iVisitKitExample";
+			path = "Target Support Files/Pods-iVisitKitExample";
+			sourceTree = "<group>";
+		};
+		E7563E2948D575E8372B184E47DE785B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15B7E179E923EE798A791B4C9235B2D6 /* Images.xcassets */,
+				C8D0215C9E8228C638C224A89A3B5934 /* IVMapStoryboard.storyboard */,
+				5463A0F32BE800245A4D7CAA2E03FBBD /* IVPanoramaStoryboard.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EC6420BAA016E33659FE43FAD89EF20C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E67B1E08267401AE098A4CD0307646C0 /* Pods-iVisitKitExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		28512FAAAC957FF143EC2C6EE7A96666 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82D2464F2F7A2C6F2E58BE1C8CED166 /* CBDoubleTapAndPanGestureRecognizer.h in Headers */,
+				A93F39585C61B0CECAFFC703D6060119 /* CBZipFile.h in Headers */,
+				14D39020C6E27C9E8362BC3C4EC6B729 /* ioapi.h in Headers */,
+				B90769769B4759BACC871576F460E74F /* IVBaseDataModel.h in Headers */,
+				A46FE86D7E1499CC53BB710E526244B0 /* IVBaseDocument.h in Headers */,
+				0D922B43BADDF45B6741DE30A0DF88A3 /* IVBaseDocumentViewController.h in Headers */,
+				CBD5AE81A068FBD860ED7844FE233FE6 /* IVCacheManager.h in Headers */,
+				CA61F82D6749AF8995BC9FD0B97104EB /* IVConstants.h in Headers */,
+				2ACCC5D2CDFDFDCA6CD7E5C84D8BCD3E /* IVDocumentManager.h in Headers */,
+				577A5BE9B4A771925588FD3F38156087 /* IVDocumentParser.h in Headers */,
+				C9D17CC57F90124AF0AD4179D5242F23 /* IVHeaders.h in Headers */,
+				5BF4C4D72D350BB55F05AE3992C7C932 /* IVImageManager.h in Headers */,
+				6B681242CC2F21F43A6439FDD50164BB /* iVisitKit-umbrella.h in Headers */,
+				774EF5B01492D9508682D091DA29ACD1 /* IVMapViewController.h in Headers */,
+				1D6CAE43F074474599A250FA814297A6 /* IVMapViews.h in Headers */,
+				B68D0A7CCB7A0C69F835F804534AD89A /* IVOverlayManager.h in Headers */,
+				E195FC46447BDA47A59FF246C8FF998D /* IVPanoramaAnnotationViewController.h in Headers */,
+				F8CCFEC6CE16E8628AB234C8C5964CAA /* IVPanoramaDocument.h in Headers */,
+				F2F750F4C3C79D85CCFA72F368E83023 /* IVPanoramaGestureRecognizer.h in Headers */,
+				B3DE24AE87606D02F82BBAE5B4D00FE8 /* IVPanoramaHitTestGestureRecognizer.h in Headers */,
+				90CD9A2FB598C0DE6469D97EA1A2BD72 /* IVPanoramaNodesListView.h in Headers */,
+				9FD6F5983D23E7046ABFF762870F6E67 /* IVPanoramaOverlayScene.h in Headers */,
+				CBB303F44945BEFD69FA331E328AE1B5 /* IVPanoramaScene.h in Headers */,
+				5916CD8DD4EBD4999D3B76F4E016B2ED /* IVPanoramaViewController.h in Headers */,
+				19D41DC84372B032E8D105670D42AD62 /* IVStatusCenter.h in Headers */,
+				217F16705A8125F38FC11E72961914E4 /* NSString+Additions.h in Headers */,
+				EF2B73DBA929D6662E91BB60813B1076 /* NSString+Hashes.h in Headers */,
+				DCF4F070932188A2E2933608B372D8B4 /* TBXML+CBAdditions.h in Headers */,
+				1225A10D531A3045AE154E44ED1DBA02 /* TBXML+Compression.h in Headers */,
+				B7BF73BF26BCF870BF3DDEA4403C2B50 /* TBXML+HTTP.h in Headers */,
+				9C30696D99D2C58A80D5DD31E6B7A7E5 /* TBXML.h in Headers */,
+				474D9D89F27D6930E5E888147D5BED71 /* UIImage+ResizeMagick.h in Headers */,
+				A9B1445F19D94BD2B49EF79CDDC7D84E /* UIViewController+extension.h in Headers */,
+				573882A1E3FC8059D21B92F341240AF5 /* unzip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E319B1510B34A5FF8681B55E4331E24D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BEC6A9FB1611E6EDFCF652DFD8FC8C2 /* Pods-iVisitKitExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		61C2C499EC5FE8D25995AC5DBB19FFD1 /* iVisitKit-Images */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8297265AD0318172FB8D2CC5E2283760 /* Build configuration list for PBXNativeTarget "iVisitKit-Images" */;
+			buildPhases = (
+				C4DD1E001550D055EEB6169E2DF2BFCE /* Sources */,
+				40EA181D17D69B6B50B24486EC423DEC /* Frameworks */,
+				AF5764A085A2683AF156EB3A6B59AA59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iVisitKit-Images";
+			productName = "iVisitKit-Images";
+			productReference = F2250F4405C3A6C56A1C731D039DD1C6 /* Images.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EB235A02EBBC472BAD6E276B9824AED1 /* iVisitKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D64308C442FAA581FAC2A54B213961 /* Build configuration list for PBXNativeTarget "iVisitKit" */;
+			buildPhases = (
+				28512FAAAC957FF143EC2C6EE7A96666 /* Headers */,
+				ECF879A279B7E32DE041A07347AC1B5A /* Sources */,
+				55FF17AB3940C3AF84F7312669DC30CA /* Frameworks */,
+				5AA6BB1478EC129DD57C8DFECA88CAD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B3499796A3454ABBBC5D489B4A35283 /* PBXTargetDependency */,
+			);
+			name = iVisitKit;
+			productName = iVisitKit;
+			productReference = 6945FD909267E8C5A5235D61F777D7FB /* iVisitKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8BA6916AA2F68425047EA5BB75B2DC2 /* Pods-iVisitKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AA16C0D925E40A55C471D3BABA4B5B /* Build configuration list for PBXNativeTarget "Pods-iVisitKitExample" */;
+			buildPhases = (
+				E319B1510B34A5FF8681B55E4331E24D /* Headers */,
+				10466798C5102341346AD448B5C198C4 /* Sources */,
+				10BB4F8E46D994C5B72AD7B34F2AFC9E /* Frameworks */,
+				9AF8CAE3546F69673415D704BC5C0F0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				365F25591341C9BC8F7722C5CFF1EB36 /* PBXTargetDependency */,
+			);
+			name = "Pods-iVisitKitExample";
+			productName = "Pods-iVisitKitExample";
+			productReference = 57C476BBEE46CBFD63ADEE79FDB3F03B /* Pods_iVisitKitExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9D9F1414C998EB6B1811808C70C65E68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB235A02EBBC472BAD6E276B9824AED1 /* iVisitKit */,
+				61C2C499EC5FE8D25995AC5DBB19FFD1 /* iVisitKit-Images */,
+				F8BA6916AA2F68425047EA5BB75B2DC2 /* Pods-iVisitKitExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AA6BB1478EC129DD57C8DFECA88CAD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9EA79A871CC221FBD91368EC1B05518 /* Images.bundle in Resources */,
+				B9D26E520513813AC83FD45272C16D2C /* IVMapStoryboard.storyboard in Resources */,
+				4235585B85E4963F1F342C9BD5CD233F /* IVPanoramaStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF8CAE3546F69673415D704BC5C0F0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5764A085A2683AF156EB3A6B59AA59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AB20BE7646C8812CD9600A5D841FCDC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10466798C5102341346AD448B5C198C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA0C5ECBBB2C33AEBA553D43640CEBA /* Pods-iVisitKitExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DD1E001550D055EEB6169E2DF2BFCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF879A279B7E32DE041A07347AC1B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D6D5D895DA919C15F63660EB0E731C9 /* CBDoubleTapAndPanGestureRecognizer.m in Sources */,
+				A6943F0531EBA51CDE9C65394F069AB2 /* CBZipFile.m in Sources */,
+				9DB7B750AE9D418FD1858414CC598702 /* ioapi.c in Sources */,
+				2A6351DC523D0D66D4E20F8253D8B3A3 /* IVBaseDataModel.m in Sources */,
+				8DEC9BE524CE2A666D708DD562708226 /* IVBaseDocument.m in Sources */,
+				CB636B0310BCA6E628E9FEF71AB03A39 /* IVBaseDocumentViewController.m in Sources */,
+				E772FA78805BD6E019D75E8B7F0B3CBF /* IVCacheManager.m in Sources */,
+				AB4E6BFD3A05E68CD3A793DF538BEC7A /* IVDocumentManager.m in Sources */,
+				5B720783C41E4549DEBAADF2735A67BD /* IVDocumentParser.m in Sources */,
+				D47EAC0D460EA8F15A2BA10C4A26EDB2 /* IVImageManager.m in Sources */,
+				D21746EDD361739C681F904545FF5585 /* iVisitKit-dummy.m in Sources */,
+				CA3674D3768DF65503D32532349BDD01 /* IVMapViewController.m in Sources */,
+				7E04930009AB94C4C17767E4D09A9A38 /* IVMapViews.m in Sources */,
+				DA714558057E36792C2AF0E6910B43C6 /* IVOverlayManager.m in Sources */,
+				8A4A5846AEE1BFAC5EEFD9CCD9CE2F41 /* IVPanoramaAnnotationViewController.m in Sources */,
+				BACDC950AE503C1D7DB8D682C852D4F5 /* IVPanoramaDocument.m in Sources */,
+				3EB70F8607749E5C31745F711B41B07C /* IVPanoramaGestureRecognizer.m in Sources */,
+				EC402F9D49C0D642216125A2671A6745 /* IVPanoramaHitTestGestureRecognizer.m in Sources */,
+				955B900DFCDA1B32E1103ABFF0665A19 /* IVPanoramaNodesListView.m in Sources */,
+				55DE38BFC59A96156EC0DDEF1C85CE09 /* IVPanoramaOverlayScene.m in Sources */,
+				05203EDF47BE4145653462A23DAAE914 /* IVPanoramaScene.m in Sources */,
+				F69D02A7424D3F6EADF2AA37AD82FA3C /* IVPanoramaViewController.m in Sources */,
+				8F33FB9851FDFAF5AC3C8540C4F004F0 /* IVStatusCenter.m in Sources */,
+				9444EB006770971988CD19B962A0AF20 /* NSString+Additions.m in Sources */,
+				E525893B73CC95EB42E8E3703C934D82 /* NSString+Hashes.m in Sources */,
+				DBFECB2D5F14043138DCB0A2B8A04149 /* TBXML+CBAdditions.m in Sources */,
+				9E05176F15DD5CCE44AC2A604C9D9292 /* TBXML+Compression.m in Sources */,
+				2FC81AB8E92C6880E254C55BDF6AC7A4 /* TBXML+HTTP.m in Sources */,
+				A0711B9B39E05685013FA9436602F103 /* TBXML.m in Sources */,
+				A8CE57F9D1FD58CE6283587B18546206 /* UIImage+ResizeMagick.m in Sources */,
+				1DFA41189CFEB782AC113D5AB485FF73 /* UIViewController+extension.m in Sources */,
+				3D59709C99BA2E40B22EDD84F641C970 /* unzip.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		365F25591341C9BC8F7722C5CFF1EB36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iVisitKit;
+			target = EB235A02EBBC472BAD6E276B9824AED1 /* iVisitKit */;
+			targetProxy = 8B6985B5C13EAC0FBCF56AB18CF3ED1B /* PBXContainerItemProxy */;
+		};
+		9B3499796A3454ABBBC5D489B4A35283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iVisitKit-Images";
+			target = 61C2C499EC5FE8D25995AC5DBB19FFD1 /* iVisitKit-Images */;
+			targetProxy = 2B7C7ABC42916FB202AA3E2DF57A03B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		063EE72D3CB25472EB851560ED451FCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6689D9E1E265BB5BA5DB578AF665E7F1 /* iVisitKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/iVisitKit";
+				INFOPLIST_FILE = "Target Support Files/iVisitKit/ResourceBundle-Images-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Images;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1E4533A1C902D14D981B10C53A0DB0FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6689D9E1E265BB5BA5DB578AF665E7F1 /* iVisitKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iVisitKit/iVisitKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iVisitKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iVisitKit/iVisitKit.modulemap";
+				PRODUCT_MODULE_NAME = iVisitKit;
+				PRODUCT_NAME = iVisitKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		235EF8A555586B1CE77A17D634F85824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6689D9E1E265BB5BA5DB578AF665E7F1 /* iVisitKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/iVisitKit";
+				INFOPLIST_FILE = "Target Support Files/iVisitKit/ResourceBundle-Images-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = Images;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		33770220C1737FA2CAACF64002CA532D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 275E98BFC6D383D1BB8FF18DD5CC86F5 /* Pods-iVisitKitExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iVisitKitExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iVisitKitExample/Pods-iVisitKitExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5BCF04EE087614BE02C5205FEED672CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6689D9E1E265BB5BA5DB578AF665E7F1 /* iVisitKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iVisitKit/iVisitKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iVisitKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iVisitKit/iVisitKit.modulemap";
+				PRODUCT_MODULE_NAME = iVisitKit;
+				PRODUCT_NAME = iVisitKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DFC9796FA9E6BCF680E1E0B1780DD0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		966958FB6426C5AFF0CFBAD9F6493905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15CDAD6D8031E29889404CE3FB736E1 /* Pods-iVisitKitExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iVisitKitExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iVisitKitExample/Pods-iVisitKitExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E19471FE7E209D0818DAFB22D649A6E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E19471FE7E209D0818DAFB22D649A6E9 /* Debug */,
+				8DFC9796FA9E6BCF680E1E0B1780DD0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8297265AD0318172FB8D2CC5E2283760 /* Build configuration list for PBXNativeTarget "iVisitKit-Images" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				063EE72D3CB25472EB851560ED451FCC /* Debug */,
+				235EF8A555586B1CE77A17D634F85824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AA16C0D925E40A55C471D3BABA4B5B /* Build configuration list for PBXNativeTarget "Pods-iVisitKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33770220C1737FA2CAACF64002CA532D /* Debug */,
+				966958FB6426C5AFF0CFBAD9F6493905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D64308C442FAA581FAC2A54B213961 /* Build configuration list for PBXNativeTarget "iVisitKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4533A1C902D14D981B10C53A0DB0FB /* Debug */,
+				5BCF04EE087614BE02C5205FEED672CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module iVisitKit {
+  umbrella header "iVisitKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

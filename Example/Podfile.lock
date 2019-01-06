@@ -1,0 +1,16 @@
+PODS:
+  - iVisitKit (0.0.1)
+
+DEPENDENCIES:
+  - iVisitKit (from `../`)
+
+EXTERNAL SOURCES:
+  iVisitKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  iVisitKit: a428cdb342b0b000f4faae3106dbefedd930865b
+
+PODFILE CHECKSUM: 92a4649da8910e171a2adf8afb3eb9dd1cb3cdfd
+
+COCOAPODS: 1.5.3

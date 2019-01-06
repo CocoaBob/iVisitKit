@@ -1,0 +1,25 @@
+{
+  "name": "iVisitKit",
+  "version": "0.0.1",
+  "summary": "A kit to play PNO files for iVisit 360 (iVisit 3D).",
+  "homepage": "https://github.com/CocoaBob/iVisitKit",
+  "authors": {
+    "CocoaBob": "mengke.wang@gmail.com"
+  },
+  "social_media_url": "http://twitter.com/CocoaBob",
+  "source": {
+    "git": "https://github.com/CocoaBob/iVisitKit.git",
+    "tag": "v0.0.1"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "iVisitKit/**/*.{h,m,c}",
+  "resources": "iVisitKit/**/*.{png,xib,storyboard}",
+  "resource_bundles": {
+    "Images": [
+      "iVisitKit/Images.xcassets"
+    ]
+  },
+  "requires_arc": true
+}
